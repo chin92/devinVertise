@@ -1,0 +1,158 @@
+html body{
+    width:100%;
+    height:100%;
+    margin:0;
+  /*   background: -webkit-linear-gradient(left top, red , blue);
+  background: -o-linear-gradient(bottom right, red, blue); 
+  background: -moz-linear-gradient(bottom right, red, blue); 
+  background: linear-gradient(to bottom right, red , blue);*/
+   /*  background-image: url("img/headerBgm.jpg");
+    background-repeat: no-repeat;*/
+}
+/*Navigation bar*/
+.login{
+    padding:none!important;
+}
+/*.ProfilePageOneContainer {
+
+    display: block;
+    position: fixed;
+    margin-top: 0;
+    width: 100%;
+    height: 10%;
+}*/
+/*Inner Divs of navigation bar*/
+.myDevin-navigationBrand{
+    width:10%;
+    height:100%;
+    background-color: White;
+    float:left;
+}
+/*Toggle button*/
+.toogleBtn{
+
+    float:left !important;
+    margin-left:15px;
+    margin-top:0px;
+    width:25px;
+    height:25px;
+    background:WhiteSmoke;
+    cursor: pointer;
+    text-align: center;
+    -webkit-border-radius: 3px;
+
+}
+/*.toogleBtn:hover{
+  border:1px solid #000000 ;
+}*/
+.toogleBtn > div{
+    width:24px ;
+    height:1px;
+    background:#000000;
+    margin:4px 0px;
+    border-radius:4px;
+
+}
+/*.toogleBtn:hover > div{
+
+
+}*/
+/*myColorBtn*/
+.myColorBtn{
+    width:60px;
+    height:35px;
+    margin-left: 10px;
+}
+/*SidePanel*/
+.SidePanel{
+    width:20%;
+    height:100%;
+    position: fixed;
+    left: -50%;
+    top: 30%;
+    background:rgb(0, 0,250,1);
+    /*opacity: 0;*/
+    transition:  left 1s linear 0s;
+    cursor: pointer;
+    -webkit-border-radius:3px;
+}
+/*ProfilePageOneContainer*/
+.ProfilePageOneContainer{
+    display:none;
+    width:80%;
+    height:70%;
+    margin-top:4%;
+    margin-left:20%;
+    float:left;
+    position:fixed;
+    background-color: #dff0d8;
+}
+#toogleBtn{
+
+    width:150px;
+    height:30px;
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+.buttonsGroup{
+    width:100%;
+    height:10%;
+    margin-left:20%;
+    margin-top:35%;
+    float:left;
+    position:fixed;
+}
+.myBtn{
+    float:left !important;
+    margin-left:10px;
+}
+.a{
+    text-decoration: none !important;
+    color:white;
+}
+
+.[type=file]{
+    position: relative;
+    text-align: right;
+    -moz-opacity:0 ;
+    filter:alpha(opacity: 0);
+    opacity: 0;
+    z-index: 2;
+}
+.myBtnDown{
+    height:40px !important;
+    float:left !important;
+    margin-left:10px;
+    line-height: 0.5;
+    display: none;
+}
+.myBtnDown:hover{
+    background-color: none !important;
+}
+.myBtnDown a:hover{
+    background-color: none !important;
+}
+.buttonDownload{
+    display: none;
+}
+/*file uploader*/
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    float:left;
+    margin-left: 10px;
+  /*  margin: 10px;*/
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
