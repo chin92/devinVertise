@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title></title>
+            <!-- meta tags -->
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta http-equiv="Expires" content="Sat, 01 Dec 2001 00:00:00 GMT">
+    </head>
+    <body>
+        <canvas id="canvas" width="620" height="600" style="border:1px dashed red"></canvas>
+        <input type="color" id="colorPicker" name="colorPicker" >
+        <script type="text/javascript" src="js/lib/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="bower_components/fabric/dist/fabric.js"></script>
+        <script type="text/javascript">
+            (function(){
+                var canvas=new fabric.Canvas('canvas'); 
+                var currentModel=null;
+                
+                loadModel('template/short-sleeve.svg');
+                
+                function renderCanvas(object){
+                    canvas.add(object);
+                    canvas.renderAll();
+                }
+                
+                function loadModel(url){
+                    fabric.loadSVGFromURL(url, function(objects, options) {
+                        var model = fabric.util.groupSVGElements(objects, options);
+                        model.set({ 
+                            selectable : false
+                        });
+                        currentModel=model;
+                        renderCanvas(model);
+                    });
+                }
+                
+                function changeModelColor(colorCode){
+                    if (currentModel.paths) {
+                        for (var i = 0; i < currentModel.paths.length; i++) {
+                            currentModel.paths[i].setFill(colorCode);
+                            //console.log(currentModel.paths[i]);
+                      }
+                      canvas.renderAll();
+                    }
+                }
+                
+                $('#colorPicker').change(function(e){
+                    changeModelColor($(this).val());
+                });
+            })();
+        </script>
+    </body>
+</html>
